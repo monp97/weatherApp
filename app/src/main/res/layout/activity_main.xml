@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main"
+    tools:context="nitw.ac.in.weatherapp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Weather App!"
+        android:textSize="30dp"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="city name here..."
+        android:onClick="clear"
+        android:gravity="center"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:textColor="@android:color/background_light"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/black"
+        android:text="OK"
+        android:onClick="showWeather"
+        android:layout_marginTop="34dp" />
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layout11"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+
+                android:textColor="@android:color/white"
+                android:text="Weather"
+                android:background="@android:color/black"
+                android:padding="10dp"
+                android:elevation="5dp"
+                />
+
+            <TextView
+                android:id="@+id/weatherInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:text="hey you"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout12"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:text="Min Temp"
+                android:background="@android:color/black"
+                android:padding="10dp"
+                android:elevation="5dp"
+                />
+            <TextView
+                android:id="@+id/minTempInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:text="hey you"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout13"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:text="Max Temp"
+                android:background="@android:color/black"
+                android:padding="10dp"
+                android:elevation="5dp"
+                />
+            <TextView
+                android:id="@+id/maxTemoInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:text="hey you"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout14"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@android:color/white"
+                android:text="Humidity"
+                android:background="@android:color/black"
+                android:padding="10dp"
+                android:elevation="5dp"
+                />
+            <TextView
+                android:id="@+id/humidityInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:text="hey you"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:elevation="5dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Back"
+            android:onClick="back"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
